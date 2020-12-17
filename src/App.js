@@ -13,12 +13,12 @@ class App extends Component {
   render() {
     let routes = (
       <Switch>
-        <Route path="/Products/:id" component={ProductDetail} />
-        <Route path="/Products" component={ProductsContainer} />  
+        <Route exact path="/Products" component={ProductsContainer} />  
+        <Route exact path="/Products/:id" component={ProductDetail} />
         <Route exact path="/Order" component={ReviewOrder} />  
-        <Route path="/Order/Checkout" component={ContactData} />  
-        <Route path="/404" component={PageNotFound} />  
-        <Redirect to="/404" />
+        <Route exact path="/Order/Checkout" component={ContactData} />  
+        <Route exact path="/404" component={PageNotFound} />  
+        <Redirect to="/Products" />
       </Switch>
     );
     return(
