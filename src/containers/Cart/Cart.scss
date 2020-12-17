@@ -1,0 +1,32 @@
+.none {
+    display: none;
+}
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__heading {
+        width: 100%;
+        background-color: #FFF;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    &__items {
+    }
+    
+}
+.empty-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+    .empty {
+        font-size: 3rem;
+        font-weight: 500;
+        color: white;
+    }
+}
+
+
