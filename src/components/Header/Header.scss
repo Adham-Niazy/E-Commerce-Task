@@ -1,0 +1,134 @@
+@import "../../mediaQuery_variables.scss";
+
+// HEADER COMPONENT STYLE
+.header {
+height: 7rem;
+background-color: #fff;
+border-bottom: 1px solid var(--grey-light-2);
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 1.4rem;
+@media only screen and ( max-width: $bp-smallest ) {
+    flex-wrap: wrap;
+    height: 11rem;
+    align-content: space-around;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+// LOGO 1st CHILD
+.logo {
+    height: 3.25rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+// SEARCH 2nd CHILD
+.search {
+    flex: 0 0 40%;
+    // NESTED FLEXBOX
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and ( max-width: $bp-smallest ) {
+        order: 1;
+        flex: 0 0 100%;
+        background-color: var(--grey-light-2);
+    }
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: var(--grey-light-2);
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 50px;
+        width: 90%;
+        margin-right: -3.25rem;
+        transition: all .2s;
+        &:focus {
+            outline: none;
+            width: 100%;
+            background-color: var(--grey-light-3);
+        }
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--grey-light-4);
+            font-size: inherit;
+        }
+    }
+    // THIS IS BECAUSE I WANT THE BG_COLOR OF THE BUTTON BE THE SAME OF INPUT WHILE FOCUSING ON INPUT
+    .search__input:focus + .search__button {
+        background-color: var(--grey-light-3);
+    }
+    &__button {
+        border: none;
+        background-color: var(--grey-light-2);
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            transform: translateY(2px);
+        }
+    }
+    &__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--grey-Dark-3);
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+// USER NAV 3rd CHILD
+.user-nav {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    // THIS IS BECAUSE I WANT TO CHOOSE ALL DIRECT CHILDREN OF USER NAV
+    & > * {
+        padding: 0 2rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: all .2s;
+    }
+    & > *:hover {
+        background-color: var(--grey-light-2);
+    }
+    &__icon-box {
+        position: relative;
+    }
+    &__icon {
+        height: 2.25rem;
+        width: 2.25rem;
+        fill: var(--grey-Dark-2);
+    }
+    &__notification {
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        font-size: .8rem;
+        background-color: var(--color-primary);
+        color: #fff;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__user {
+        &-photo {
+            height: 3.75rem;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+    }
+    // BECUSE IT CHANGES TO LINK DUE TO ROUTER LINK DIRECTIVE
+    &__user:focus {
+        outline: none;
+    }
+}
+}
