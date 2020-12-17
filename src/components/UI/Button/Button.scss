@@ -1,0 +1,25 @@
+.Button {
+    padding: 1.5rem 1.5rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 1rem;
+    align-self: flex-end;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+
+    &:disabled {
+        cursor: auto;
+    }
+}
+.Add {
+    background-color: var(--color-primary);
+    color: #FFF;
+}
+.Order {
+    color: var(--color-primary);
+    background-color: #FFF;
+}
