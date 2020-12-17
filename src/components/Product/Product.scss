@@ -1,0 +1,118 @@
+@import '../../mediaQuery_variables.scss';
+// LIST VIEW
+.list-item {
+    display: flex;
+    box-shadow:
+    0  0.5rem 1rem rgba(154,160,185,0.05),
+    0 1.5rem 4rem rgba(166,173,201,0.2);
+    background-color: #FFF;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    padding: 4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+
+    img {
+        width: 23%;
+        margin-right: 4rem;
+    }
+    &__details {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        
+        h2 {
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 3rem;
+        }
+
+        p {
+            color: #000;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+    }
+    &__price {
+        display: flex;
+        .price {
+            margin-right: 1rem;
+            letter-spacing: 2px;
+        }
+        .currency {
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+    }
+    &__button {
+        padding: 1.5rem 3rem;
+        margin: 1rem;
+        border: none;
+        background-color: var(--color-primary);
+        color: #FFF;
+        border-radius: 1rem;
+        align-self: start;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+
+        &:disabled {
+            cursor: auto;
+        }
+    }
+}
+// GRID VIEW
+.grid-item {
+    width: 40%;
+    box-shadow:
+    0  0.5rem 1rem rgba(154,160,185,0.05),
+    0 1.5rem 4rem rgba(166,173,201,0.2);
+    background-color: #FFF;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    padding: 4rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    @media only screen and (max-width: $bp-smallest) {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    &__details {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 3rem;
+        }
+
+        p {
+            color: #000;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+    }
+    &__price {
+        display: flex;
+        .price {
+            margin-right: 1rem;
+            letter-spacing: 2px;
+        }
+        .currency {
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+    }
+}
