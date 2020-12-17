@@ -1,0 +1,44 @@
+@import "../../mediaQuery_variables.scss";
+
+.container {
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--grey-light-1);
+    box-shadow: 0 2rem 6rem rgba(0,0,0,0.3);
+
+    // min-height: 60rem; // FOR DEVELOPMENT AND SHOULD BE CLEARED AFTER WORK
+
+    @media only screen and (max-width: $bp-largest) {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// CONTENT CONTAINER
+.content {
+    display: flex;
+    min-height: 60vh;
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// SIDEBAR
+.sidebar {
+    background-color: var(--grey-Dark-1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: flex .5s ease;
+}
+.open {
+    flex: 0 0 30%;
+}
+.closed {
+    flex: 0 0 0%;
+}
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// INFO_WINDOW
+.info-window {
+    flex: 1;
+}
