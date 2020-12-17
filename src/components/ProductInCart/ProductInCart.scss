@@ -1,0 +1,20 @@
+.product {
+    padding: 1rem;
+    margin: 2rem;
+    display: flex;
+    background-color: #FFF;
+    border-radius: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        width: 20%;
+    }
+    &__functionalty {
+        display: flex;
+        align-items: center;
+        span {
+            font-size: 3rem;
+            font-weight: 200;
+        }
+    }
+}
